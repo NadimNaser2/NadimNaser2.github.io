@@ -2809,7 +2809,7 @@ h6 {
         font-size: 30px; } }
   .subscription_box p {
     margin-bottom: 0; }
-  .subscription_box .subscription input {
+  .subscription_box .subscription input, textarea{
     min-width: 380px;
     max-width: 380px;
     line-height: 48px;
@@ -2819,12 +2819,12 @@ h6 {
     font-weight: 400;
     border-radius: 5px;
     color: #ffffff; }
-    .subscription_box .subscription input:focus {
+    .subscription_box .subscription input,textarea:focus {
       outline: none; }
     @media (max-width: 420px) {
-      .subscription_box .subscription input {
+      .subscription_box .subscription input,textarea {
         min-width: 250px; } }
-    .subscription_box .subscription input.placeholder {
+    .subscription_box .subscription input,textarea.placeholder {
       color: #ffffff;
       font-weight: 400; }
     .subscription_box .subscription input:-moz-placeholder {
@@ -2864,6 +2864,11 @@ h6 {
 
 .subscription .info.error {
   color: red; }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffff;
+    opacity: 1; /* Firefox */
+  }
 
 /* End Newsletter Area css
 ============================================================================================ */
@@ -3302,5 +3307,44 @@ h6 {
 /* End Footer Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
+.emni
+
+  {
+    min-width: 380px;
+    max-width: 380px;
+    line-height: 48px;
+    margin-top: 10px;
+    padding: 0 25px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    font-weight: 400;
+    border-radius: 5px;
+    color: #ffffff;
+    &:focus {
+      outline: none;
+    }
+    @media (max-width: 420px) {
+      min-width: 250px;
+    }
+    @include placeholder {
+      color: #ffffff;
+      font-weight: 400;
+    }
+  }
+  .mapouter{
+    margin-top: 20px;
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;}
+  .mapouter iframe
+  {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+  .gmap_canvas {overflow:hidden;background:none!important;height:420px;width:1110px;}
 
 /*# sourceMappingURL=style.css.map */
